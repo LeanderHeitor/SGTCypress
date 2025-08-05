@@ -6,5 +6,7 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     baseUrl: 'https://qa.newsgt.isitics.com/',
+    viewportWidth: 1440,
+    viewportHeight: 900
   },
 });
