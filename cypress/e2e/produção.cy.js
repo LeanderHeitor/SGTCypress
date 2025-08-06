@@ -1,10 +1,13 @@
+import LoginActions from '../support/pages/login/loginActions';
+import NavigationActions from '../support/pages/navegação/navegacaoActions';
 describe('Produção SGT', () => {
+    const loginActions = LoginActions;
+    const navigationActions = NavigationActions;
     beforeEach(() => {
-
+        loginActions.visit();
+        loginActions.loginWithValidCredentials();
     });
     it('deve acessar o módulo de produção grupo', () => {
-        cy.submitLoginForm('igor.conde@sistemafiepe.org.br', '123456');
-
         // Clica no link
         cy.get('.FirstSidebar a[href="/cad/atendimento/producao"]')
             .should('be.visible')
@@ -18,9 +21,7 @@ describe('Produção SGT', () => {
         cy.log('Módulo de produção grupo carregado');
     });
 
-    it.only('deve acessar o módulo de produção individual', () => {
-        cy.viewport('macbook-15');
-        cy.submitLoginForm('igor.conde@sistemafiepe.org.br', '123456');
+    it('deve acessar o módulo de produção individual', () => {
 
         // Clica no link
         cy.get('.FirstSidebar a[href="/cad/atendimento/producao"]')

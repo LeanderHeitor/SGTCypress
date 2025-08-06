@@ -1,7 +1,12 @@
+import LoginActions from '../support/pages/login/loginActions';
+import NavigationActions from '../support/pages/navegação/navegacaoActions';
 describe('Gerenciamento de Colaboradores SGT', () => {
     beforeEach(() => {
-        cy.submitLoginForm('igor.conde@sistemafiepe.org.br', '123456');
-        cy.goTo('/cad/pessoa/colaborador', 'Gerenciar Colaborador');
+        const loginActions = LoginActions;
+        const navigationActions = NavigationActions;
+        loginActions.visit();
+        loginActions.loginWithValidCredentials();
+        navigationActions.goToColaborador();
     });
     it('deve acessar o módulo de colaboradores', () => {
         cy.log('log')
