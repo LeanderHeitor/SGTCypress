@@ -6,6 +6,16 @@ describe('Login', () => {
     loginActions.loginWithValidCredentials();
     loginActions.checkLoginCookies();
   })
+  it('login como admin', () => {
+    loginActions.visit();
+    loginActions.loginAsAdmin();
+    loginActions.checkLoginCookies();
+  });
+  it('login como Departamento Regional', () => {
+    loginActions.visit();
+    loginActions.loginAsDepartamentoRegional();
+    loginActions.checkLoginCookies();
+  });
   it('login com email não cadastrado', () => {
     loginActions.visit();
     loginActions.loginWithNonExistentEmail();
