@@ -1,4 +1,4 @@
-import LoginActions from '.././support/pages/login/loginActions';
+import LoginActions from '../../support/pages/login/loginActions';
 describe('Login', () => {
   const loginActions = LoginActions;
   it('deve fazer login com sucesso', () => {
@@ -8,8 +8,7 @@ describe('Login', () => {
   })
   it('login como admin', () => {
     loginActions.visit();
-    loginActions.loginAsAdmin();
-    loginActions.checkLoginCookies();
+    loginActions.login(Cypress.env('admin_login_email'), Cypress.env('admin_login_senha'));
   });
   it('login como Departamento Regional', () => {
     loginActions.visit();
@@ -29,7 +28,7 @@ describe('Login', () => {
 
   })
   it('Deve testar campos obrigatórios', () => {
-    loginActions.visit(); 
+    loginActions.visit();
     loginActions.verifyingRequiredFields();
 
     //cy.goTo('/cad/atendimento/atendimento', "Atendimentos", 'Atendimentos')

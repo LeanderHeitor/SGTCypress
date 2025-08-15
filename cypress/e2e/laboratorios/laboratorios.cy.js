@@ -1,14 +1,13 @@
-import LoginActions from '../../../support/pages/login/loginActions';
-import NavigationActions from '../../../support/pages/navegação/navegacaoActions';
+import loginActions from "../../support/pages/login/loginActions";
+import navegacaoActions from "../../support/pages/navegação/navegacaoActions";
+
 describe('Laboratórios SGT', () => {
-    const loginActions = LoginActions;
-    const navigationActions = NavigationActions;
     beforeEach(() => {
         loginActions.visit();
+        loginActions.loginAsAdmin();
     });
     it('deve acessar o módulo de laboratórios como Admin', () => {
-        loginActions.loginAsAdmin();
-        navigationActions.goToLaboratorios();
+        navegacaoActions.goToLaboratorios();
         cy.log('Módulo de laboratórios carregado');
     });
 });

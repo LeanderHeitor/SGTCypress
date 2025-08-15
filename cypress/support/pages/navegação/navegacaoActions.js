@@ -10,7 +10,7 @@ class navegacaoActions {
         const pageTitle = Cypress.env('atendimento_title');
         this.navegacaoPage.getStandardSideBarLink(url)
             .realHover()
-            .wait(2000)
+            
             .click();
         this.navegacaoPage.getPageTitle(pageTitle)
             .should('be.visible');
@@ -21,7 +21,7 @@ class navegacaoActions {
         const pageTitle = Cypress.env('cliente_title');
         this.navegacaoPage.getStandardSideBarLink(url)
             .realHover()
-            .wait(2000)
+            
             .click();
         this.navegacaoPage.getPageTitle(pageTitle)
             .should('be.visible');
@@ -32,7 +32,7 @@ class navegacaoActions {
         const pageTitle = Cypress.env('colaboradores_title');
         this.navegacaoPage.getStandardSideBarLink(url)
             .realHover()
-            .wait(2000)
+            
             .click();
         this.navegacaoPage.getPageTitle(pageTitle)
             .should('be.visible');
@@ -43,7 +43,7 @@ class navegacaoActions {
         const pageTitle = Cypress.env('configuracoes_title');
         this.navegacaoPage.getStandardSideBarLink(url)
             .realHover()
-            .wait(2000)
+            
             .click();
         this.navegacaoPage.getPageTitle(pageTitle)
             .should('be.visible');
@@ -54,9 +54,9 @@ class navegacaoActions {
         const pageTitle = Cypress.env('dashboard_title');
         this.navegacaoPage.getStandardSideBarLink(url)
             .realHover()
-            .wait(2000)
+            
             .click()
-            .wait(2000)
+            
         this.navegacaoPage.getPageTitle(pageTitle)
             .should('be.visible');
         return this;
@@ -68,7 +68,7 @@ class navegacaoActions {
             .realHover()
         this.navegacaoPage.getDashboardBrasilSubModule()
             .click()
-            .wait(5000)
+            
         this.navegacaoPage.getPageTitle(brasil_mais_title)
             .should('exist')
         return this;
@@ -80,7 +80,7 @@ class navegacaoActions {
             .realHover()
         this.navegacaoPage.getDashboardAtendimentosSubModule()
             .click()
-            .wait(5000)
+            
         this.navegacaoPage.getPageTitle(atendimento_title)
             .should('exist')
         return this;
@@ -92,7 +92,7 @@ class navegacaoActions {
             .realHover()
         this.navegacaoPage.getDashboardDivergenciasSubModule()
             .click()
-            .wait(5000)
+            
         this.navegacaoPage.getPageTitle(divergencias_title)
             .should('exist')
         return this;
@@ -102,7 +102,7 @@ class navegacaoActions {
         const pageTitle = Cypress.env('home_title');
         this.navegacaoPage.getStandardSideBarLink(url)
             .realHover()
-            .wait(2000)
+            
             .click();
         this.navegacaoPage.getPageTitle(pageTitle)
             .should('be.visible');
@@ -113,7 +113,7 @@ class navegacaoActions {
         const pageTitle = Cypress.env('indicadores_title');
         this.navegacaoPage.getStandardSideBarLink(url)
             .realHover()
-            .wait(2000)
+            
             .click();
         this.navegacaoPage.getPageTitle(pageTitle)
             .should('be.visible');
@@ -193,7 +193,7 @@ class navegacaoActions {
             .realHover()
         this.navegacaoPage.getIndicadoresSucessoSubModule()
             .click()
-            .wait(5000)
+            
         this.navegacaoPage.getPageTitle(indicadores_sucesso)
             .should('exist')
         this.navegacaoPage.getPageSubTitle(Cypress.env('indicadores_sucesso_subtitle'))
@@ -207,7 +207,7 @@ class navegacaoActions {
             .realHover()
         this.navegacaoPage.getIndicadoresValorParaClienteSubModule()
             .click()
-            .wait(5000)
+            
         this.navegacaoPage.getPageTitle(indicadores_valor_cliente)
             .should('exist')
         this.navegacaoPage.getPageSubTitle(Cypress.env('indicadores_valor_cliente_subtitle'))
@@ -221,7 +221,7 @@ class navegacaoActions {
             .realHover()
         this.navegacaoPage.getIndicadoresRecursosSubModule()
             .click()
-            .wait(5000)
+            
         this.navegacaoPage.getPageTitle(recursos_ci_title)
             .should('exist')
         this.navegacaoPage.getPageSubTitle(Cypress.env('indicadores_recurso_ci_subtitle'))
@@ -235,7 +235,7 @@ class navegacaoActions {
             .realHover()
         this.navegacaoPage.getIndicadoresProcessosDeNegocioSubModule()
             .click()
-            .wait(5000)
+            
         this.navegacaoPage.getPageTitle(processos_negocio_title)
             .should('exist')
         this.navegacaoPage.getPageSubTitle(Cypress.env('processos_negocio_subtitle'))
@@ -248,7 +248,7 @@ class navegacaoActions {
         const pageTitle = Cypress.env('produtos_title');
         this.navegacaoPage.getStandardSideBarLink(url)
             .realHover()
-            .wait(2000)
+            
             .click();
         this.navegacaoPage.getPageTitle(pageTitle)
             .should('be.visible');
@@ -259,7 +259,7 @@ class navegacaoActions {
         const pageTitle = Cypress.env('receitas_title');
         this.navegacaoPage.getStandardSideBarLink(url)
             .realHover()
-            .wait(2000)
+            
             .click();
         this.navegacaoPage.getPageTitle(pageTitle)
             .should('be.visible');
@@ -270,7 +270,7 @@ class navegacaoActions {
         const pageTitle = Cypress.env('sem_acesso_title');
         this.navegacaoPage.getStandardSideBarLink(url)
             .realHover()
-            .wait(2000)
+            
             .click();
         this.navegacaoPage.getPageTitle(pageTitle)
             .should('be.visible');
@@ -283,7 +283,7 @@ class navegacaoActions {
         this.navegacaoPage.getStandardSideBarLink(url)
             .realHover()
             .click()
-            .wait(2000);
+            ;
         this.navegacaoPage.getPageTitle(pageTitle)
             .should('be.visible');
         return this;
@@ -317,7 +317,7 @@ class navegacaoActions {
             .realHover()
         this.navegacaoPage.getMentoriaLeanSubModule()
             .click()
-            .wait(5000);
+            ;
         this.navegacaoPage.getPageTitle(pageTitle)
             .should('be.visible');
         
@@ -330,7 +330,7 @@ class navegacaoActions {
             .realHover()
         this.navegacaoPage.getMentoriaDigitalSubModule()
             .click()
-            .wait(5000);
+            ;
         this.navegacaoPage.getPageTitle(pageTitle)
             .should('be.visible');
         
@@ -353,7 +353,7 @@ class navegacaoActions {
             .realHover()
         this.navegacaoPage.getPortifolioRegionalSubModule()
             .click()
-            .wait(5000);
+            ;
         this.navegacaoPage.getPageTitle(pageTitle)
             .should('be.visible');
         return this;

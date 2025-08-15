@@ -26,6 +26,8 @@
 //entra na pagina inicial do sistema
 
 import 'cypress-real-events';
+import 'cypress-wait-until';
+
 Cypress.Commands.add('start', () => {
   cy.visit('/');
 });
@@ -34,13 +36,13 @@ Cypress.Commands.add('submitLoginForm', (Email, Senha) => {
   cy.get('[data-testid="email"]').type(Email);
   cy.get('[data-testid="password"]').type(Senha);
   cy.get('[data-testid="login-btn"]').click();
-  cy.wait(5000)
+  
 });
 Cypress.Commands.add('goTo', (a, pageTitle) => {
   cy.get('.FirstSidebar a[href="' + a + '"]')
   //pega a sidebar
     .realHover()
-    .wait(5000)
+    
     .click();
   
   cy.contains('h1', pageTitle)

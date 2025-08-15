@@ -18,16 +18,11 @@ class LoginActions {
     clickLogin() {
         cy.get(this.loginPage.loginFields.loginButton).click()
     }
-    waitForLoginPageToLoad() {
-        cy.wait(5000)
-        return this
-    }
 
     login(email, password) {
         this.fillEmail(email);
         this.fillPassword(password);
         this.clickLogin();
-        this.waitForLoginPageToLoad();
         this.loginPage.getDasboardTitle().should('be.visible');
         return this
     }
