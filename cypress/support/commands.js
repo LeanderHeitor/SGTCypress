@@ -27,24 +27,5 @@
 
 import 'cypress-real-events';
 import 'cypress-wait-until';
-
-Cypress.Commands.add('start', () => {
-  cy.visit('/');
-});
-Cypress.Commands.add('submitLoginForm', (Email, Senha) => {
-  cy.start();
-  cy.get('[data-testid="email"]').type(Email);
-  cy.get('[data-testid="password"]').type(Senha);
-  cy.get('[data-testid="login-btn"]').click();
-  
-});
-Cypress.Commands.add('goTo', (a, pageTitle) => {
-  cy.get('.FirstSidebar a[href="' + a + '"]')
-  //pega a sidebar
-    .realHover()
-    
-    .click();
-  
-  cy.contains('h1', pageTitle)
-    .should('be.visible');
-});
+// custom global commands removed: start, submitLoginForm, goTo
+// Use page objects / actions for navigation and login instead.

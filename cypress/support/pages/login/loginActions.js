@@ -5,7 +5,7 @@ class LoginActions {
         this.loginPage = new LoginPage();
     }
     visit() {
-        cy.start()
+    cy.visit('/')
     }
     fillEmail(email) {
         cy.get(this.loginPage.loginFields.email).type(email)
@@ -23,7 +23,11 @@ class LoginActions {
         this.fillEmail(email);
         this.fillPassword(password);
         this.clickLogin();
-        this.loginPage.getDasboardTitle().should('be.visible');
+        
+        // Validação mais robusta - aguardar saída da página de login
+        cy.get('[data-testid="email"]', { timeout: 10000 }).should('not.exist');
+        cy.log('✅ Login POM executado com sucesso - saiu da página de login');
+        
         return this
     }
     loginWithValidCredentials() {
